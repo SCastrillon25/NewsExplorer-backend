@@ -6,10 +6,9 @@ const {
     saveArticle,
     deleteArticle,
 } = require('../controllers/articles');
-const auth = require('../middleware/auth');
 
-router.get("/", auth, getArticle);
-router.post("/", auth, saveArticle);
-router.delete("/:_id", auth, deleteArticle);
+router.get("/", getArticle);
+router.post("/", saveArticle);
+router.delete("/:_id", deleteArticle);
 
 module.exports = router;

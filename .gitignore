@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados
+coverage/
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Directorio de dependencias
+node_modules
+
+# Directorio de cache npm opcional
+.npm
+
+# Archivos de sistema y carpetas de ajustes IDE
+.DS_Store
+.idea
+.vscode
+.env

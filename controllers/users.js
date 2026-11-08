@@ -21,12 +21,12 @@ const loguin = async (req,res, next) => {
         }
         const isPasswordValid = await bcrypt.compare(
             password,
-            userFound.password,
-        );
+            userFound.password, 
+        )
 
         if (!isPasswordValid) {
             throw new UnauthorizedError('usuario o contraseña incorrecto');
-        };
+        }
 
         const token = jwt.sign(
             {
@@ -75,7 +75,7 @@ const createUser = async (req, res, next) => {
       throw new ConflictError('El correo ya está registrado');
     }
 
-    if (error.name === 'ValidateError') {
+    if (error.name === 'ValidationError') {
       throw new BadRequestError('Datos inválidos');
     }
 
